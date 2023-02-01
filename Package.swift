@@ -10,6 +10,7 @@ let package = Package(
         .library(
             name: "MehtabPersonalLibrary",
             targets: ["MehtabPersonalLibrary"]),
+        .library(name: "MehtabPersonalLibraryObjc", targets: ["MehtabPersonalLibraryObjc"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,7 +22,10 @@ let package = Package(
         .target(
             name: "MehtabPersonalLibrary",
             dependencies: [],
-            path: "Sources"),
+            path: "Sources/MehtabPersonalLibrary"),
+        .target(name: "MehtabPersonalLibraryObjc",
+               dependencies: [],
+               path: "Sources/ObjcPersonalLibrary"),
         .testTarget(
             name: "MehtabPersonalLibraryTests",
             dependencies: ["MehtabPersonalLibrary"]),
