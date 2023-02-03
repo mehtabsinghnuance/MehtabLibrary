@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-class ViewController : UIViewController{
+public class ViewController : UIViewController{
     
     @IBOutlet var FirstLabel: UILabel!
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         FirstLabel.text = "ABC"
     }
