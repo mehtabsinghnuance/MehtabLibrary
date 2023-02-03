@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-public class ViewController : UIViewController{
+public class MehtabViewController : UIViewController{
     
     @IBOutlet var FirstLabel: UILabel!
     
