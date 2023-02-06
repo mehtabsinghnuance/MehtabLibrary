@@ -41,6 +41,7 @@ let package = Package(
                 path: "Sources/SecondLibrary"),
         .testTarget(
             name: "MehtabPersonalLibraryTests",
-            dependencies: ["MehtabPersonalLibrary",  .product(name: "SnapshotTesting", package: "swift-snapshot-testing")]),
+            dependencies: ["MehtabPersonalLibrary",  .product(name: "SnapshotTesting", package: "swift-snapshot-testing")],
+            path: "Tests/MehtabPersonalLibraryTests")
     ]
 )

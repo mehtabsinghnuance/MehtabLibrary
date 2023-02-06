@@ -3,7 +3,7 @@ import SwiftUI
 @testable import MehtabPersonalLibrary
 import SnapshotTesting
 
-final class MehtabPersonalLibraryTests: XCTestCase {
+final public class MehtabPersonalLibraryTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
