@@ -16,6 +16,7 @@ let package = Package(
             targets: ["MehtabPersonalLibraryObjc"]),
         .library(name: "MehtabSecondLibrary",
                  targets: ["MehtabSecondLibrary"]),
+        .library(name: "MehtabTestLibrary", targets: ["MehtabPersonalLibraryTests"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
