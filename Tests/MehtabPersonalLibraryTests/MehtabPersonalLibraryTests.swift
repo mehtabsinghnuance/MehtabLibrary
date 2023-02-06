@@ -11,7 +11,7 @@ final public class MehtabPersonalLibraryTests: XCTestCase {
 //        XCTAssertEqual(MehtabPersonalLibrary().text, "Hello, World!")
     }
     
-    func testMainView(){
+    public func testMainView() throws{
         let vc = MehtabViewController.storyboardVC
         assertSnapshot(matching: vc, as: .image)
         
