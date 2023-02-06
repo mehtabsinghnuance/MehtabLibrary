@@ -16,7 +16,7 @@ let package = Package(
             targets: ["MehtabPersonalLibraryObjc"]),
         .library(name: "MehtabSecondLibrary",
                  targets: ["MehtabSecondLibrary"]),
-        .library(name: "MehtabTestLibrary", targets: ["MehtabPersonalLibraryTests"])
+        .library(name: "MehtabTestLibrary", targets: ["MehtabTestLibrary"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -39,8 +39,8 @@ let package = Package(
         .target(name: "MehtabSecondLibrary",
                dependencies: [],
                 path: "Sources/SecondLibrary"),
-        .testTarget(
-            name: "MehtabPersonalLibraryTests",
+        .target(
+            name: "MehtabTestLibrary",
             dependencies: ["MehtabPersonalLibrary",  .product(name: "SnapshotTesting", package: "swift-snapshot-testing")],
             path: "Tests/MehtabPersonalLibraryTests")
     ]
