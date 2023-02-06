@@ -10,6 +10,8 @@ import UIKit
 
 public class MehtabViewController : UIViewController{
     
+    public static let storyboardVC = UIStoryboard(name: "MehtabBoard", bundle: Bundle.module).instantiateInitialViewController()!
+    
     @IBOutlet var FirstLabel: UILabel!
     
     public override func viewDidLoad() {

@@ -27,8 +27,7 @@ let package = Package(
         .target(
             name: "MehtabPersonalLibrary",
             dependencies: [],
-            path: "Sources/MehtabPersonalLibrary",
-            resources: [.copy("Sources/MehtabPersonalLibrary")]),
+            path: "Sources/MehtabPersonalLibrary"),
         .target(name: "MehtabPersonalLibraryObjc",
                dependencies: [],
                path: "Sources/ObjcPersonalLibrary"),
