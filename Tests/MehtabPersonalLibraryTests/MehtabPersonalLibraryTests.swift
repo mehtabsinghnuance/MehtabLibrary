@@ -19,10 +19,45 @@ final public class MehtabPersonalLibraryTests: XCTestCase {
         
     }
     
-    public func testButtonTap() throws{
-//        let storyboard = UIStoryboard(name: "MehtabBoard", bundle: nil)
-//        let sut = storyboard.instantiateInitialViewController() as! MehtabViewController
-//        sut.loadViewIfNeeded()
-//        sut.showDataButton.sendActions(for: .touchUpInside)
+    public func testShowDataButton() throws{
+        let storyboard = UIStoryboard(name: "MehtabBoard", bundle: Bundle.module)
+        let sut : MehtabViewController
+        if #available(iOS 13.0, *) {
+            sut = storyboard.instantiateViewController(identifier: "MehtabViewController") as! MehtabViewController
+            sut.loadViewIfNeeded()
+            sut.showDataButton(self)
+            assertSnapshot(matching: sut, as: .image)
+        } else {
+            // Fallback on earlier versions
+        }
+       
+    }
+    
+    public func testShowInvisibleButton() throws{
+        let storyboard = UIStoryboard(name: "MehtabBoard", bundle: Bundle.module)
+        let sut : MehtabViewController
+        if #available(iOS 13.0, *) {
+            sut = storyboard.instantiateViewController(identifier: "MehtabViewController") as! MehtabViewController
+            sut.loadViewIfNeeded()
+            sut.revealAnotherButton(self)
+            assertSnapshot(matching: sut, as: .image)
+        } else {
+            // Fallback on earlier versions
+        }
+       
+    }
+    
+    public func testHideInvisibleButton() throws{
+        let storyboard = UIStoryboard(name: "MehtabBoard", bundle: Bundle.module)
+        let sut : MehtabViewController
+        if #available(iOS 13.0, *) {
+            sut = storyboard.instantiateViewController(identifier: "MehtabViewController") as! MehtabViewController
+            sut.loadViewIfNeeded()
+            sut.hideAnotherButton(self)
+            assertSnapshot(matching: sut, as: .image)
+        } else {
+            // Fallback on earlier versions
+        }
+       
     }
 }
