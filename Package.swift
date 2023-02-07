@@ -39,7 +39,12 @@ let package = Package(
         .target(name: "MehtabSecondLibrary",
                dependencies: [],
                 path: "Sources/SecondLibrary"),
-        .target(
+//        .target(
+//            name: "MehtabExternalTestFramework",
+//            dependencies: ["MehtabPersonalLibrary",  .product(name: "SnapshotTesting", package: "swift-snapshot-testing")],
+//            path: "Tests/MehtabPersonalLibraryTests"
+//        ),
+        .testTarget(
             name: "MehtabTestLibrary",
             dependencies: ["MehtabPersonalLibrary",  .product(name: "SnapshotTesting", package: "swift-snapshot-testing")],
             path: "Tests/MehtabPersonalLibraryTests")

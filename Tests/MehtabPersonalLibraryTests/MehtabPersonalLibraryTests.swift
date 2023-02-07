@@ -5,9 +5,6 @@ import SnapshotTesting
 
 final public class MehtabPersonalLibraryTests: XCTestCase {
     
-    public override init() {
-        super.init()
-    }
     
     func testExample() throws {
         // This is an example of a functional test case.
@@ -20,5 +17,12 @@ final public class MehtabPersonalLibraryTests: XCTestCase {
         let vc = MehtabViewController.storyboardVC
         assertSnapshot(matching: vc, as: .image)
         
+    }
+    
+    public func testButtonTap() throws{
+//        let storyboard = UIStoryboard(name: "MehtabBoard", bundle: nil)
+//        let sut = storyboard.instantiateInitialViewController() as! MehtabViewController
+//        sut.loadViewIfNeeded()
+//        sut.showDataButton.sendActions(for: .touchUpInside)
     }
 }

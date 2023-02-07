@@ -14,8 +14,14 @@ public class MehtabViewController : UIViewController{
     
     @IBOutlet var FirstLabel: UILabel!
     
+    @IBAction func showDataButton(_ sender: Any) {
+        
+        dataButton.text = "You clicked the button"
+        
+    }
+    @IBOutlet var dataButton: UILabel!
     public override func viewDidLoad() {
         super.viewDidLoad()
-        FirstLabel.text = "ABC"
+        FirstLabel.text = "Welcome to my app!"
     }
 }
